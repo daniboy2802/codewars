@@ -1,13 +1,15 @@
 let board = [
   [1, 1, 0, 1],
   [0, 1, 0, 1],
-  [0, 1, 1, 0],
+  [0, 1, null, 0],
   [0, 1, 1, 1]
 ]
 
 const checkHorizontal = (horizontalMatriz) => {
-  if(horizontalMatriz.includes(0) && !horizontalMatriz.includes(1)) { console.log('0 won') } 
-  else if(horizontalMatriz.includes(1) && !horizontalMatriz.includes(0)) { console.log('1 won') } 
+  if(!horizontalMatriz.includes(null)) {
+    if(horizontalMatriz.includes(0) && !horizontalMatriz.includes(1)) { console.log('0 won') } 
+    else if(horizontalMatriz.includes(1) && !horizontalMatriz.includes(0)) { console.log('1 won') } 
+  }
 }
 
 const checkVertical = (board) => {
