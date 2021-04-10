@@ -16,16 +16,12 @@ const findMissing = function(list) {
   differences = [...differences]
 
   differences.forEach(difference => {
-    let arrayWithMissingNumber = []
+    let missingNumberArray = []
     for(i = 0; i <= list.length; i++) {
-      if(i == 0) {
-        arrayWithMissingNumber.push(list[0])
-      } else {
-        arrayWithMissingNumber.push(arrayWithMissingNumber[i - 1] + difference)
-      }
+      i == 0 ? missingNumberArray.push(list[0]) : missingNumberArray.push(missingNumberArray[i - 1] + difference)
     }
-    if((arrayWithMissingNumber[list.length] == list[list.length - 1]) && arrayWithMissingNumber.length == list.length + 1) {
-      finalNumber = arrayWithMissingNumber.filter(x => list.indexOf(x) === -1)
+    if((missingNumberArray[list.length] == list[list.length - 1]) && missingNumberArray.length == list.length + 1) {
+      finalNumber = missingNumberArray.filter(x => list.indexOf(x) === -1)
       return finalNumber[0]
     } 
   })
