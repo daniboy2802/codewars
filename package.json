@@ -1,0 +1,23 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js'",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon 4kyu-sudoku.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniboy2802/codewars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniboy2802/codewars/issues"
+  },
+  "homepage": "https://github.com/daniboy2802/codewars#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
